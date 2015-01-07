@@ -1,0 +1,36 @@
+<script>
+	function TopPot(location, hoursOfOp, percentEnter, averagePerOrder, hourlyFT, donutsperHour) {
+		this.location = location;
+		this.hoursOfOp = hoursOfOp;
+		this.percentEnter = percentEnter;
+		this.averagePerOrder = averagePerOrder;
+		this.hourlyFT = function () {
+			return (Math.random() * (hourlyFT.max - hourlyFT.min) + 1);
+		};
+		this.donutsPerHour = function () {
+			return this.hourlyFT() * this.percentEnter / 100 * this.averagePerOrder;
+		};
+	};
+
+var downtown = new TopPot("downtown", 11, 10, 4, {max: 220, min: 80});
+var capitolHill = new TopPot("Capitol Hill", 11, 45, 2, {max: 45, min: 5});
+var southLakeUnion = new TopPot("South Lake Union", 11, 5, 6, {max: 250, min: 180});
+var wedgewood = new TopPot("Wedgewood", 11, 20, 1.5, {max: 60, min: 20});
+var ballard = new TopPot("Ballard", 11, 33, 1, {max: 175, min: 25});
+
+var report = function(store) {
+	var hours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+	var sum = 0;
+	for (var i = 0; i < hours.length; i++) {
+		sum += store.donutsPerHour();
+	};
+	console.log("The " + store.location + " location needs " + sum + " per day ");
+};
+
+report(downtown);
+report(capitolHill);
+report(southLakeUnion);
+report(wedgewood);
+report(ballard);
+
+</script>
