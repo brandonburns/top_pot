@@ -27,7 +27,8 @@ Below is a print out of both:
 - The number of donuts needed per hour in each store (5 sets of 11 lines of code)
 - The total number of donuts needed per day at each location
 
-* Here is the code for each hour *
+
+Here is the code for each hour 
 
  The downtown location needs 37.6496243044734 for the 1 hour.
 top_pot.html:24 The downtown location needs 37.9364674590528 for the 2 hour.
@@ -85,7 +86,8 @@ top_pot.html:24 The Ballard location needs 34.0182588918088 for the 9 hour.
 top_pot.html:24 The Ballard location needs 48.05650772205088 for the 10 hour.
 top_pot.html:24 The Ballard location needs 11.839466800955124 for the 11 hour.
 
-* Here is the code for the total number of donuts for each day per location *
+
+Here is the code for the total number of donuts for each day per location 
 
  The downtown location needs 348.811400951445 per day 
 top_pot.html:34 The Capitol Hill location needs 241.3112694896758 per day 
